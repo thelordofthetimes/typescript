@@ -1,7 +1,7 @@
 # typescript
 typescript learning
 
-# Requirement
+# Requirements
 
 Javascript virtual machine, include package manager: [nodejs](https://nodejs.org/)
 
