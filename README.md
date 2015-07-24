@@ -5,9 +5,9 @@ typescript learning
 
 Javascript virtual machine, include package manager: [nodejs](https://nodejs.org/)
 
-Revision distributed system: (git)[https://git-scm.com/]
+Revision distributed system: [git](https://git-scm.com/)
 
-Type script compiler (node package): (tsc)(http://www.typescriptlang.org/Tutorial) 
+Type script compiler (node package): [tsc](http://www.typescriptlang.org/Tutorial) 
 
 # Installation
 
