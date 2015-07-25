@@ -11,7 +11,7 @@ gulp.task('script.clean', function() {
 });
 
 gulp.task('script.compile', ['script.clean'], function() {
-    return gulp.src('src/script/*.ts').
+    return gulp.src('src/script/main.ts').
         pipe(tsc({
             target: 'ES5',
             module: 'amd'
