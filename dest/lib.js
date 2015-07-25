@@ -6,6 +6,11 @@ var biology;
     })(biology.Gender || (biology.Gender = {}));
     var Gender = biology.Gender;
 })(biology || (biology = {}));
+
+///<reference path="human.ts"/>
+///<reference path="intelligent-human.ts"/>
+module.exports = biology;
+
 ///<reference path="animal.ts"/>
 var biology;
 (function (biology) {
@@ -35,6 +40,7 @@ var biology;
     })();
     biology.Human = Human;
 })(biology || (biology = {}));
+
 ///<reference path="human.ts"/>
 var biology;
 (function (biology) {
@@ -55,3 +61,17 @@ var biology;
     })();
     biology.IntelligentHuman = IntelligentHuman;
 })(biology || (biology = {}));
+
+///<reference path="biology.ts"/>
+var biology = require('./biology');
+var humanOne = new biology.Human();
+console.log(humanOne.whoAreYou());
+humanOne.rename('bui anh');
+console.log(humanOne.whoAreYou());
+console.log('id', humanOne.id);
+var intelligentHuman = new biology.IntelligentHuman('bui anh', biology.Gender.Male, 10);
+console.log(intelligentHuman.whoAreYou());
+
+/**
+ * Created by Bui on 7/25/2015.
+ */

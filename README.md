@@ -10,4 +10,5 @@ Revision distributed system: [git](https://git-scm.com/)
 # Installation
 
     git clone https://github.com/thelordofthetimes/typescript.git
+    cd typescript
     npm install

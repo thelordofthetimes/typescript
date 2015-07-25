@@ -10,8 +10,12 @@ gulp.task('typescript.clean', function() {
 });
 
 gulp.task('typescript', ['typescript.clean'], function() {
-    return gulp.src('src/script/*tsc').
-        pipe(tsc()).
+    return gulp.src('src/script/*.ts').
+        pipe(tsc({
+            target: 'ES5'
+        })).
         pipe(concat('lib.js')).
         pipe(gulp.dest('dest/'));
 });
+
+gulp.task('default', ['typescript']);
