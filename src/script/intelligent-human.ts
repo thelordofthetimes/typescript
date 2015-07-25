@@ -1,6 +1,6 @@
 ///<reference path="human.ts"/>
 
-module biology {
+namespace biology {
 
     export interface IIntelligentHuman extends IHuman {
         intelligent: number;

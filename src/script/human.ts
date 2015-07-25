@@ -1,6 +1,6 @@
 ///<reference path="animal.ts"/>
 
-module biology {
+namespace biology {
 
     export interface IHuman {
         name: string;

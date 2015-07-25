@@ -1,4 +1,4 @@
-module biology {
+namespace biology {
 
     export enum Gender {
         Male,

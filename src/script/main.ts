@@ -1,6 +1,5 @@
 ///<reference path="biology.ts"/>
 
-import biology = require('./biology');
 
 var humanOne = new biology.Human();
 console.log(humanOne.whoAreYou());
