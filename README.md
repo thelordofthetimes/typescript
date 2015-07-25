@@ -12,3 +12,4 @@ Type script compiler (node package): [tsc](http://www.typescriptlang.org/Tutoria
 # Installation
 
     git clone https://github.com/thelordofthetimes/typescript.git
+    npm install
