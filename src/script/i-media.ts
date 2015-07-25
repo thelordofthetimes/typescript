@@ -1,4 +1,4 @@
-module web.media {
+namespace web.media {
 
     export interface IMedia {
         url:string;

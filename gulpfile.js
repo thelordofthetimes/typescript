@@ -11,21 +11,37 @@ gulp.task('script.clean', function() {
 });
 
 gulp.task('script.compile', ['script.clean'], function() {
-    return gulp.src('src/script/main.ts').
+    return gulp.src('src/script/module.ts').
         pipe(tsc({
             target: 'ES5',
             module: 'amd'
         })).
-        pipe(concat('bin.js')).
+        pipe(concat('web.media.js')).
         pipe(gulp.dest('dest/script/')).
         pipe(uglify()).
-        pipe(concat('bin.min.js')).
+        pipe(concat('web.media.min.js')).
         pipe(gulp.dest('dest/script'));
 });
 
-gulp.task('script.run', ['script.compile'], function() {
-    run('node dest/script/bin.js').
+gulp.task('script.test.clean', function() {
+    return gulp.src('test/bin/*').
+        pipe(clean());
+});
+
+gulp.task('script.test.compile', ['script.test.clean'], function() {
+    return gulp.src('test/unit.ts').
+        pipe(tsc({
+            target: 'ES5',
+            module: 'amd'
+        })).
+        pipe(concat('unit.js')).
+        pipe(gulp.dest('test/bin/'));
+});
+
+gulp.task('script.test', ['script.test.compile'], function() {
+    run('node test/bin/unit.js').
         exec();
 });
 
-gulp.task('default', ['script.run']);
+gulp.task('default', ['script.compile']);
+gulp.task('test', ['script.test']);

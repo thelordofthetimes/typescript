@@ -1,8 +1,6 @@
 ///<reference path="i-media.ts"/>
 
-
-module web.media {
-
+namespace web.media {
     export interface IPlayer {
         play(media:IMedia):boolean;
     }
